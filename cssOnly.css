@@ -1,0 +1,260 @@
+html{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    max-width:100%;
+    height: 100%;
+    /* overflow-x: hidden; */
+  }
+  body{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  .toggler{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width:30px;
+    height:30px;
+    padding:5px;
+    display: none;
+    border: 1px solid lightgrey;
+    border-radius:50%;
+    transition: 500ms;
+    cursor: pointer;
+  }
+  .toggleIcon{
+    width: 100%;
+    height: 1px;
+    border: 1px solid #282828;
+    background-color: #282828;
+    transition: 500ms;
+    opacity: 1;
+    margin:5px 0px;
+    padding: 0;
+    display: block;
+  }
+  .icon2{
+    background-color: lightgrey;
+    border-color: lightgrey;
+  }
+  .nav{
+    width: 100%;
+    position: relative;
+    top: 100px;
+  }
+  .brand{
+    position: absolute;
+    top: 20px;
+    left:40px;
+    z-index: 2;
+  }
+  .brandImg{
+    border-radius: 5px;
+    height: 100px;
+    width:120px;
+  }
+  .mainNav{
+    width: 100%;
+    height: 50px;
+    background-color: #282828;
+    color: white;
+    position: absolute;
+    top: 45px;
+    z-index: 1;
+  }
+  .navList{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 165px;
+    padding:0px;
+  }
+  
+  .mainItem a{
+    color:white;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 300ms;
+  }
+  .mainItem a:hover{
+    color: grey;
+  }
+  
+  /* //////////////////////top bar */
+  .contAbove{
+    height: 22.5px;
+    position: absolute;
+    left:165px;
+    top: 20px;
+    display: flex;
+  }
+  .topText{
+    margin: 0;
+    padding: 0;
+    color: lightgrey;
+    margin-top: 5px;
+  }
+  .above{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly
+  }
+  
+  .aboveItem a{
+    /* text-decoration: none;
+    padding: 2px;
+    background-color: grey;
+    color: white;
+    border: 1px solid white; */
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: 300ms;
+    cursor: pointer;
+    color: lightgrey;
+    font-size: 1.5em;
+  }
+  .aboveItem a:hover{
+    color:grey;
+    /* background-color: white;
+    border-color: grey */
+  }
+  @keyframes icon1key {
+    0%{
+      border-color:#282828;
+      background-color: #282828;
+      transform: rotate(0deg)translate(0px,0px);
+    }
+    50%{
+      border-color:#282828;
+      background-color: #282828;
+    }
+    100%{
+      border-color: red;
+      background-color: red;
+      transform: rotate(315deg)translate(-8px,7px);
+    }
+  }
+  @keyframes icon2key{
+    0%{
+        transform: rotate(0deg);
+        opacity:1;
+        border-color:#282828;
+        background-color: #282828;
+      }
+    50%{
+        opacity:1;
+        border-color:lightgrey;
+        background-color: lightgrey;
+      }
+    100%{
+      transform: rotate(360deg);
+        opacity:0;
+        border-color:lightgrey;
+        background-color: lightgrey;
+      }
+  }
+  @keyframes icon3key {
+    0%{
+      border-color:#282828;
+      background-color: #282828;
+      transform: rotate(0deg)translate(0px,0px);
+    }
+    50%{
+      border-color:#282828;
+      background-color: #282828;
+    }
+    100%{
+      border-color: red;
+      background-color: red;
+      transform: rotate(405deg)translate(-5px,-2px);
+    }
+  }
+  @media(max-width:660px){
+    .toggler{
+      display: block;
+    }
+    .nav{
+      position: fixed;
+      top:0;
+    }
+    .brand{
+      top:0px;
+      left:15px;
+      /* border:1px solid black; */
+    }
+    .brandImg{
+      border-radius: 0px;
+    }
+    .mainNav{
+      background: none;
+    }
+    .navList{
+      align-items: flex-start;
+      position:absolute;
+      flex-direction: column;
+      left: 15px;
+      margin: 0;
+      padding: 0;
+      width: 116px;
+      opacity: 0;
+      /* opacity hides when you scroll up extra to top */
+      transition: 500ms;
+      top:-110px;
+      z-index: 100;
+    }
+    .aboveItem{
+      position: fixed;
+      left:30px;
+      transition: 900ms;
+    }
+    /* when class is added/removed bc navbar clicked */
+    .icon1.show{
+      animation: icon1key 500ms;
+      animation-fill-mode: forwards;
+    }
+    .icon2.show{
+      animation: icon2key 500ms;
+      animation-fill-mode: forwards;
+    }
+    .icon3.show{
+      animation: icon3key 500ms;
+      animation-fill-mode: forwards;
+    }
+    .toggler.show{
+      border-color:red;
+    }
+    .navList.show{
+      position: relative;
+      z-index: 100;
+      transform: translateY(170px);
+      opacity: 1;
+    }
+    .top1.show{
+      left: 130px;
+    }
+    .top2.show{
+      left: 170px;
+    }
+    .top3.show{
+      left: 210px;
+    }
+    /* hides done */
+    .topText{
+      display: none;
+    }
+    .mainItem{
+      background-color:#282828;
+      padding:2px 2px;
+      width: 100%;
+      border-bottom: 2px solid #303030;
+    }
+  }

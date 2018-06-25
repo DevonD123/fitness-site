@@ -1,0 +1,227 @@
+//need to figurout why i can scroll right forever
+.wrap{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior:smooth;
+    overflow-y: scroll;
+}
+.topImg{
+    width: 100%;
+    height:40vh;
+    margin: 0;
+    padding: 0;
+    background: url('./background.jpeg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.about{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        text-align: center;
+        
+    }
+    hr{
+        width:80%;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        @media only screen and (max-width: 855px) {
+            flex-direction: column;
+        }
+        img{
+            margin-top: 20px;
+            width: 50%;
+            margin-right: 5px;
+        }
+        .desc{
+            font-size: 1.5em;
+            width: 40%;
+            margin:0 10px;
+            @media only screen and (max-width: 855px) {
+                width:80%;
+                font-size: 1.1em;
+            }
+            
+        }
+    }
+    
+}
+.contact{
+    background:url('./spin.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .flexCont{
+        margin-left:10px;
+        h2{
+            color: white;
+            
+        }
+        p{
+            color: white;
+            
+        }
+        a{
+            transform: 300ms;
+            cursor: pointer;
+            text-decoration: none;
+            padding:5px 30px;
+            border: 1px solid white;
+            color: white;
+        }
+        a:hover{
+            color: pink;
+            border-color: pink;
+        }
+    }  
+}
+.location{
+    background:url('./boxing.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .flexCont{
+        margin-right: 10px;
+        margin-left:10px;
+        h2{
+            color: white;
+            
+        }
+        p{
+            color: white;
+            
+        }
+        a{
+            transform: 300ms;
+            cursor: pointer;
+            text-decoration: none;
+            padding:5px 30px;
+            border: 1px solid white;
+            color: white;
+        }
+        a:hover{
+            color: pink;
+            border-color: pink;
+        }
+    }  
+}
+
+.services{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+   align-items: center;
+   width: 100%;
+   .item{
+        width: 30%;
+        min-height: 30vh;
+        margin:10px 0;
+        text-align: center;
+        position: relative;
+        @media only screen and (max-width: 550px) {
+            width: 45%;
+            min-height: 15vh;
+        }
+        @media only screen and (max-width: 380px) {
+            width: 80%;
+            min-height:20vh;
+        }
+            img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transition: 500ms;
+                z-index: -100;
+            }
+            h4{
+                color: white;
+                transition: 500ms;
+                position: relative;
+                z-index: -80;
+            }
+            a{
+                color: white;
+                text-decoration:none;
+                border: 1px solid white;
+                padding: 5px;
+                cursor: pointer;
+                transition: 500ms;
+                // issue with z index covering nav items on service button but cant change due to casing all buttons to stop when nav out
+            }
+            a:hover{
+                color: pink;
+                border-color: pink;
+            }
+            p{
+                transition: 500ms;
+                opacity: 0;
+                color: black;
+                @media only screen and (max-width: 550px) {
+                    font-size: 1em;
+                }
+            }
+        &.moreInfo{
+            img{
+                display: block;
+                opacity:0;
+                transform: rotateY(180deg);
+                perspective: 1000000px;
+            }
+            p{
+                opacity:1;
+            }
+            a{
+                color:black;
+                border-color: black;
+            }
+            h4{
+                color: black;
+            }
+        }
+   } 
+   
+}
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    a{
+        text-decoration: none;
+        cursor: pointer;
+        color: grey;
+        margin-top:5px;
+    }
+    a:hover{
+        color: lightgrey;
+    }
+    h4{
+        margin:0;
+        padding:0;
+        color: grey;
+    }
+}

@@ -1,0 +1,242 @@
+.wrap {
+  width: 100%;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow-y: scroll; }
+
+.topImg {
+  width: 100%;
+  height: 40vh;
+  margin: 0;
+  padding: 0;
+  background: url("./background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.about {
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .about h1 {
+    text-align: center; }
+  .about hr {
+    width: 80%; }
+  .about .container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media only screen and (max-width: 855px) {
+      .about .container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+    .about .container img {
+      margin-top: 20px;
+      width: 50%;
+      margin-right: 5px; }
+    .about .container .desc {
+      font-size: 1.5em;
+      width: 40%;
+      margin: 0 10px; }
+      @media only screen and (max-width: 855px) {
+        .about .container .desc {
+          width: 80%;
+          font-size: 1.1em; } }
+
+.contact {
+  background: url("./spin.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .contact .flexCont {
+    margin-left: 10px; }
+    .contact .flexCont h2 {
+      color: white; }
+    .contact .flexCont p {
+      color: white; }
+    .contact .flexCont a {
+      -webkit-transform: 300ms;
+              transform: 300ms;
+      cursor: pointer;
+      text-decoration: none;
+      padding: 5px 30px;
+      border: 1px solid white;
+      color: white; }
+    .contact .flexCont a:hover {
+      color: pink;
+      border-color: pink; }
+
+.location {
+  background: url("./boxing.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .location .flexCont {
+    margin-right: 10px;
+    margin-left: 10px; }
+    .location .flexCont h2 {
+      color: white; }
+    .location .flexCont p {
+      color: white; }
+    .location .flexCont a {
+      -webkit-transform: 300ms;
+              transform: 300ms;
+      cursor: pointer;
+      text-decoration: none;
+      padding: 5px 30px;
+      border: 1px solid white;
+      color: white; }
+    .location .flexCont a:hover {
+      color: pink;
+      border-color: pink; }
+
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%; }
+  .services .item {
+    width: 30%;
+    min-height: 30vh;
+    margin: 10px 0;
+    text-align: center;
+    position: relative; }
+    @media only screen and (max-width: 550px) {
+      .services .item {
+        width: 45%;
+        min-height: 15vh; } }
+    @media only screen and (max-width: 380px) {
+      .services .item {
+        width: 80%;
+        min-height: 20vh; } }
+    .services .item img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      -webkit-transition: 500ms;
+      transition: 500ms;
+      z-index: -100; }
+    .services .item h4 {
+      color: white;
+      -webkit-transition: 500ms;
+      transition: 500ms;
+      position: relative;
+      z-index: -80; }
+    .services .item a {
+      color: white;
+      text-decoration: none;
+      border: 1px solid white;
+      padding: 5px;
+      cursor: pointer;
+      -webkit-transition: 500ms;
+      transition: 500ms; }
+    .services .item a:hover {
+      color: pink;
+      border-color: pink; }
+    .services .item p {
+      -webkit-transition: 500ms;
+      transition: 500ms;
+      opacity: 0;
+      color: black; }
+      @media only screen and (max-width: 550px) {
+        .services .item p {
+          font-size: 1em; } }
+    .services .item.moreInfo img {
+      display: block;
+      opacity: 0;
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+      -webkit-perspective: 1000000px;
+              perspective: 1000000px; }
+    .services .item.moreInfo p {
+      opacity: 1; }
+    .services .item.moreInfo a {
+      color: black;
+      border-color: black; }
+    .services .item.moreInfo h4 {
+      color: black; }
+
+.footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin: 0; }
+  .footer a {
+    text-decoration: none;
+    cursor: pointer;
+    color: grey;
+    margin-top: 5px; }
+  .footer a:hover {
+    color: lightgrey; }
+  .footer h4 {
+    margin: 0;
+    padding: 0;
+    color: grey; }
+
+/*# sourceMappingURL=main.css.map */
